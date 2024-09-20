@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, mi amor - Estilo Netflix</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F0F0F5;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(135deg, #1C2833, #4B515D);
+    padding: 20px;
+    text-align: center;
+    color: #F5F5F5;
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-family: 'Times New Roman', serif;
+    color: #4A4A4A;
+    text-align: center;
+    border-top: 2px solid #BFC9CA;
+    border-bottom: 2px solid #BFC9CA;
+    padding: 10px 0;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #BCC6CC;
+    margin-left: 20px;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; /* Oculta la barra de desplazamiento */
+}
+
+.slider {
+    display: flex;
+    width: max-content; /* Asegura que la longitud del contenedor sea la necesaria para las imágenes */
+    animation: scroll 60s linear infinite; /* Animación más lenta */
+}
+
+.slider img {
+    width: 250px;
+    height: 290px;
+    border-radius: 10px;
+    margin-right: 10px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.slider img:hover {
+    transform: scale(1.1);
+}
+
+/* Animación para desplazar automáticamente las imágenes */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+footer {
+    font-size: 0.8rem;
+    font-family: 'Times New Roman', serif;
+    color: #4A4A4A;
+    text-align: center;
+    border-top: 2px solid #BFC9CA;
+    border-bottom: 2px solid #BFC9CA;
+    padding: 10px 0;
+}
+
+/* Texto que aparece debajo de las imágenes al hacer clic */
+.image-description {
+    color: #C0A16B;
+    text-align: center;
+    display: none; /* Oculto por defecto */
+    margin-top: 10px;
+}
+
+/* Estilos responsive para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Títulos más pequeños */
+    }
+
+    footer {
+        font-size: 0.7rem; /* Footer más pequeño */
+    }
+
+    .slider img {
+        width: 150px; /* Imágenes más pequeñas en pantallas móviles */
+        height: auto; /* Mantiene la proporción */
+    }
+
+    section {
+        padding: 10px; /* Reduce el padding en móviles */
+    }
+
+    .slider-container {
+        overflow-x: auto; /* Permitir scroll horizontal en móviles */
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Capitulos de Nosotros</h1>
+    </header>
+
+    <!-- Sección 1: Cómo nos conocimos -->
+    <section>
+        <h2>Catálogo de nuestras primeras fotos</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="image-container">
+                    <img src="conversacion.jpg" alt="Conversación" onclick="showDescription('desc1')">
+                    <p id="desc1" class="image-description">Nuestra primera conversación 💬</p>
+                </div>
+                <div class="image-container">
+                    <img src="cerro1.jpg" alt="Cerro" onclick="showDescription('desc2')">
+                    <p id="desc2" class="image-description">Nuestra aventura en el cerro 🏞️</p>
+                </div>
+                <div class="image-container">
+                    <img src="cine_primera.jpg" alt="Cine" onclick="showDescription('desc3')">
+                    <p id="desc3" class="image-description">Nuestra primer ida al cine </br>  🎬</p>
+                </div>
+                <div class="image-container">
+                    <img src="cerro2.jpg" alt="Cerro" onclick="showDescription('desc4')">
+                    <p id="desc4" class="image-description">Descansando antes de que nos </br>lloviera 🌄</p>
+                </div>
+                <div class="image-container">
+                    <img src="loma2.jpg" alt="Loma" onclick="showDescription('desc5')">
+                    <p id="desc5" class="image-description">Una hermosa tarde en la loma 🌳</p>
+                </div>
+                <div class="image-container">
+                    <img src="tren.jpg" alt="Tren" onclick="showDescription('desc6')">
+                    <p id="desc6" class="image-description">Nosotros en el trenecito🚆</p>
+                </div>
+                <div class="image-container">
+                    <img src="coppel.jpg" alt="Coppel" onclick="showDescription('desc7')">
+                    <p id="desc7" class="image-description">De compras juntos <br> me encanta esta foto en coppel 🛍️</p>
+                </div>
+                <div class="image-container">
+                    <img src="cerro3.jpg" alt="Cerro" onclick="showDescription('desc8')">
+                    <p id="desc8" class="image-description">Un besito en el cerro 🌅</p>
+                </div>
+                <div class="image-container">
+                    <img src="cerro4.jpg" alt="Cerro" onclick="showDescription('desc9')">
+                    <p id="desc9" class="image-description">Cuando encontre una princesa <br> el cerro 🌄</p>
+                </div>
+                <div class="image-container">
+                    <img src="cena1.jpg" alt="Cena" onclick="showDescription('desc10')">
+                    <p id="desc10" class="image-description">Una cena bastante especial 🍽️</p>
+                </div>
+                <div class="image-container">
+                    <img src="nyssa1.jpg" alt="Nyssa" onclick="showDescription('desc11')">
+                    <p id="desc11" class="image-description">Caminando con la Nyssa 🐶</p>
+                </div>
+                <div class="image-container">
+                    <img src="videollamada.jpg" alt="Videollamada" onclick="showDescription('desc12')">
+                    <p id="desc12" class="image-description">Nuestra primera videollamada 📱</p>
+                </div>
+                <div class="image-container">
+                    <img src="novios.jpg" alt="novios" onclick="showDescription('desc13')">
+                    <p id="desc13" class="image-description">Te amo 💖</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h2>Nuestro primer viaje</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="image-container">
+                    <img src="camino.jpg" alt="Camino" onclick="showDescription('desc14')">
+                    <p id="desc14" class="image-description">Viajando con la mejor compañia</p>
+                </div>
+                <div class="image-container">
+                    <img src="manos.jpg" alt="Mano" onclick="showDescription('desc15')">
+                    <p id="desc15" class="image-description">Siempre de tu mano</p>
+                </div>
+                <div class="image-container">
+                    <img src="cenando.jpg" alt="Cenando" onclick="showDescription('desc16')">
+                    <p id="desc16" class="image-description">Cenando con mi amor  🎬</p>
+                </div>
+                <div class="image-container">
+                    <img src="paseo.jpg" alt="" onclick="showDescription('desc17')">
+                    <p id="desc17" class="image-description">Un largo paseo en lancha</p>
+                </div>
+                <div class="image-container">
+                    <img src="playa.jpg" alt="Loma" onclick="showDescription('desc18')">
+                    <p id="desc18" class="image-description">Después de una revolcada en el mar</p>
+                </div>
+                <div class="image-container">
+                    <img src="malecon.jpg" alt="Malecon" onclick="showDescription('desc19')">
+                    <p id="desc19" class="image-description">Noche de novios</p>
+                </div>
+                <div class="image-container">
+                    <img src="felicidad.jpg" alt="Felicidad" onclick="showDescription('desc20')">
+                    <p id="desc20" class="image-description">Simplemente felicidad</p>
+                </div>
+                <div class="image-container">
+                    <img src="faro.jpg" alt="Faro" onclick="showDescription('desc21')">
+                    <p id="desc21" class="image-description">Hermosa!</p>
+                </div>
+                <div class="image-container">
+                    <img src="adriana.jpg" alt="Adriana" onclick="showDescription('desc22')">
+                    <p id="desc22" class="image-description">Una bellesa de mujer aparecio frente a mi</p>
+                </div>
+                <div class="image-container">
+                    <img src="calor.jpg" alt="calor" onclick="showDescription('desc23')">
+                    <p id="desc23" class="image-description">Muriendo de calor</p>
+                </div>
+                <div class="image-container">
+                    <img src="Caluroso.jpg" alt="Nyssa" onclick="showDescription('desc24')">
+                    <p id="desc24" class="image-description">Un abrazo muy bonito</p>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <h2>Canada</h2>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="image-container">
+                    <img src="pasaporte.jpg" alt="Camino" onclick="showDescription('desc26')">
+                    <p id="desc26" class="image-description">Comenzando con el mejor viaje</p>
+                </div>
+                <div class="image-container">
+                    <img src="llegada.jpg" alt="Mano" onclick="showDescription('desc27')">
+                    <p id="desc27" class="image-description">Amor cruzando fronteras</p>
+                </div>
+                <div class="image-container">
+                    <img src="volando.jpg" alt="Cenando" onclick="showDescription('desc28')">
+                    <p id="desc28" class="image-description">Muchos kilometros, <br>mucho amor</p>
+                </div>
+                
+                <div class="image-container">
+                    <img src="candaTren.jpg" alt="Loma" onclick="showDescription('desc30')">
+                    <p id="desc30" class="image-description">Nuestro amor en Canada</p>
+                </div>
+                <div class="image-container">
+                    <img src="besoCanada.JPG" alt="Malecon" onclick="showDescription('desc31')">
+                    <p id="desc31" class="image-description">Corazón</p>
+                </div>
+                <div class="image-container">
+                    <img src="toronto.jpg" alt="Felicidad" onclick="showDescription('desc23')">
+                    <p id="desc23" class="image-description"></p>
+                </div>
+                <div class="image-container">
+                    <img src="preciosa.jpg" alt="Faro" onclick="showDescription('desc33')">
+                    <p id="desc33" class="image-description">Hermosa!</p>
+                </div>
+                <div class="image-container">
+                    <img src="felicesCasa.jpg" alt="Adriana" onclick="showDescription('desc34')">
+                    <p id="desc34" class="image-description">Felicidad pura</p>
+                </div>
+                <div class="image-container">
+                    <img src="jardinera.jpg" alt="calor" onclick="showDescription('desc35')">
+                    <p id="desc35" class="image-description">Mujer hermosa</p>
+                </div>
+                <div class="image-container">
+                    <img src="BesoCasaLoma.jpg" alt="Nyssa" onclick="showDescription('desc36')">
+                    <p id="desc36" class="image-description">Que beso!</p>
+                </div>
+                <div class="image-container">
+                    <img src="Niagara.jpg" alt="Videollamada" onclick="showDescription('desc37')">
+                    <p id="desc37" class="image-description">vista bonita, amor bonito</p>
+                </div>
+                <div class="image-container"></div>
+                    <img src="restaurante.jpg" alt="Videollamada" onclick="showDescription('desc38')">
+                    <p id="desc38" class="image-description">Rumbo a una excelente comida<br></p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>Cada momento capturado en este álbum es un pedacito de la historia que hemos creado juntos. Cada sonrisa, cada aventura, y cada instante compartido son recuerdos que atesoro más de lo que puedo explicar. Lo más increíble es que sé que esto es solo el comienzo. No puedo esperar a seguir creando más capítulos a tu lado, llenos de momentos tan únicos como tú. Gracias por hacer que cada día sea especial. Te amo más de lo que las palabras pueden decir, y sé que lo mejor aún está por venir 💖</p>
+    </footer>
+
+    <script>
+        function showDescription(id) {
+            // Ocultamos todas las descripciones primero
+            var descriptions = document.querySelectorAll('.image-description');
+            descriptions.forEach(function(description) {
+                description.style.display = 'none';
+            });
+
+            // Mostramos solo la descripción correspondiente
+            var selectedDescription = document.getElementById(id);
+            if (selectedDescription) {
+                selectedDescription.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
